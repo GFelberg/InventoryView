@@ -1,0 +1,33 @@
+# Plugin developed by GFelberg 
+# Config.yml		        
+
+# language: en
+# Thanks for downloading my plugin. For more plugins, dont forget to look my updates!
+# If you find any bugs or ideas to the plugin, pm me at spigot.
+
+# language: br/pt
+# Obrigado por baixar meu plugin. Para mais plugins, não esqueça de olhar as atualizações!
+# Se você achar qualquer erro ou ideia para o plugin, mande messagem no spigot.
+
+# Permissions
+
+# invsee.admin : Access to the players inventories and the Help Page
+# invsee.reload : Access to Reload the Plugin
+
+# Configuration 1.0
+# This configuration will display the InventoryView Messages 
+  
+InventoryView:
+  Prefix: '&a[&eInventoryView&a]&r' 
+  Invsee: '&ePlayer Inventory Opened'
+  Invechest: '&ePlayer Echest Opened'
+  PlayerNotFound: '&cThe player is offline!'
+  
+# Configuration 1.1
+# This configuration will display the Help Page Messages
+
+Help:
+  Page: '&eShows this page'
+  Invsee: '&eOpen the players inventories'
+  Invechest: '&eOpen the players enderchests'
+  Reload: '&eReloads the Plugin'

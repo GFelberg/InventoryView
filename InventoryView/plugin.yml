@@ -1,0 +1,12 @@
+name: InventoryView
+version: 1.0
+author: GFelberg
+main: me.GFelberg.InventoryView.Main
+commands:
+  inventoryview:
+    usage: /<command>
+    aliases: [inv]
+  invsee:
+    usage: /<command>
+  invechest:
+    usage: /<command>
