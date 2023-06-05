@@ -26,7 +26,7 @@ public class InventoryView implements CommandExecutor {
 			}
 
 			if (args.length == 0) {
-				sender.sendMessage(ChatColor.RED + "Usage: /inv help");
+				sender.sendMessage(ChatColor.RED + "Usage: /iv help");
 				return true;
 			}
 

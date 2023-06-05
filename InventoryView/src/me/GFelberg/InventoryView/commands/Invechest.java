@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.GFelberg.InventoryView.utils.InventoryViewUtils;
+import me.GFelberg.InventoryView.data.InventorySystem;
 
 public class Invechest implements CommandExecutor {
 
@@ -34,8 +34,8 @@ public class Invechest implements CommandExecutor {
 			if (args.length == 1) {
 				Player p = (Player) sender;
 				Player selected = Bukkit.getServer().getPlayer(args[0]);
-				InventoryViewUtils utils = new InventoryViewUtils();
-				utils.openPlayerEnderchest(p, selected);
+				InventorySystem sys = new InventorySystem();
+				sys.openPlayerEnderchest(p, selected);
 				return true;
 			}
 		}

@@ -7,7 +7,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import me.GFelberg.InventoryView.utils.InventoryViewUtils;
+import me.GFelberg.InventoryView.data.InventorySystem;
 
 public class Invsee implements CommandExecutor {
 
@@ -21,7 +21,7 @@ public class Invsee implements CommandExecutor {
 				return true;
 			}
 
-			if (!(sender.hasPermission("invsee.admin"))) {
+			if (!(sender.hasPermission("inventoryview.admin"))) {
 				sender.sendMessage(ChatColor.RED + "You dont have permission to perform this command!");
 				return true;
 			}
@@ -34,8 +34,8 @@ public class Invsee implements CommandExecutor {
 			if (args.length == 1) {
 				Player p = (Player) sender;
 				Player selected = Bukkit.getServer().getPlayer(args[0]);
-				InventoryViewUtils utils = new InventoryViewUtils();
-				utils.openPlayerInventory(p, selected);
+				InventorySystem sys = new InventorySystem();
+				sys.openPlayerInventory(p, selected);
 				return true;
 			}
 		}

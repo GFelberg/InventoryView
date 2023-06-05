@@ -5,7 +5,7 @@ main: me.GFelberg.InventoryView.Main
 commands:
   inventoryview:
     usage: /<command>
-    aliases: [inv]
+    aliases: [iv]
   invsee:
     usage: /<command>
   invechest:

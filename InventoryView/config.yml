@@ -11,16 +11,20 @@
 
 # Permissions
 
-# invsee.admin : Access to the players inventories and the Help Page
-# invsee.reload : Access to Reload the Plugin
+# inventoryview.admin : Access to the players inventories and the Help Page
+# inventoryview.bypass : Access to interact with the players inventories, as yours. It only works if the protection rules are being followed correctly.
+# inventoryview.reload : Access to Reload the Plugin
+
+# PlaceHolders
+
+# %player_inv% : Gets the specified player chosen to open the inventory
+# %player_echest% : Gets the specified player chosen to open the enderchest
 
 # Configuration 1.0
 # This configuration will display the InventoryView Messages 
   
 InventoryView:
   Prefix: '&a[&eInventoryView&a]&r' 
-  Invsee: '&ePlayer Inventory Opened'
-  Invechest: '&ePlayer Echest Opened'
   PlayerNotFound: '&cThe player is offline!'
   
 # Configuration 1.1
@@ -31,3 +35,31 @@ Help:
   Invsee: '&eOpen the players inventories'
   Invechest: '&eOpen the players enderchests'
   Reload: '&eReloads the Plugin'
+  
+# Configuration 1.2
+# This configuration will display the Player Inventory Messages
+
+PlayerInventory:
+  Message: '&b%player_inv% &eInventory Opened'
+  Yourself: '&cYou cant open your own inventory!'
+  
+# Configuration 1.3
+# This configuration will display the Player Enderchest Messages 
+  
+PlayerEnderchest:
+  Message: '&b%player_echest% &eEnderchest Opened'
+  Yourself: '&cYou cant open your own enderchest!'
+  
+# Configuration 1.4
+# This configuration will disply the Inventory Protection Events
+
+# Interact : If true, the player will not be able to interact with the players inventories, as yours. If the player has permission "inventoryview.bypass",
+# the player will have access to interact with the players inventories, as yours.
+
+# BlockAdmin : If true, no one will be able to interact with the players inventories, as yours, even with OP or the permission "inventoryview.bypass" activated.
+# This option will only have effect if the 'Interact' option is "true".
+
+InventoryProtection:
+  Interact: true
+  BlockAdmin: true  
+  

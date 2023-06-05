@@ -8,13 +8,10 @@ import me.GFelberg.InventoryView.Main;
 
 public class InventoryViewUtils {
 
-	public static String prefix, invsee, invechest, playernotfound;
+	public static String prefix;
 
 	public static void loadVariables() {
 		prefix = Main.getInstance().getConfig().getString("InventoryView.Prefix").replace("&", "§");
-		invsee = Main.getInstance().getConfig().getString("InventoryView.Invsee").replace("&", "§");
-		invechest = Main.getInstance().getConfig().getString("InventoryView.Invechest").replace("&", "§");
-		playernotfound = Main.getInstance().getConfig().getString("InventoryView.PlayerNotFound").replace("&", "§");
 	}
 
 	public void reloadConfig(Player p) {
@@ -23,7 +20,7 @@ public class InventoryViewUtils {
 			p.sendMessage(ChatColor.RED + "You dont have permission to perform this command!");
 		} else {
 			Main.getInstance().reloadConfig();
-			loadVariables();
+			Main.getInstance().loadVariables();
 			p.sendMessage(prefix + " " + ChatColor.GREEN + "Plugin reloaded successfully!");
 			Bukkit.getConsoleSender().sendMessage("===============================================");
 			Bukkit.getConsoleSender().sendMessage(ChatColor.GREEN + "InventoryView Plugin reloaded");
@@ -35,30 +32,10 @@ public class InventoryViewUtils {
 		HelpPageUtils helpUtils = new HelpPageUtils();
 		p.sendMessage(ChatColor.WHITE + "-----------------------------------------");
 		p.sendMessage(ChatColor.AQUA + "InventoryView - Help Commands");
-		p.sendMessage(ChatColor.YELLOW + "/inventoryview help : " + helpUtils.getHelp_page());
+		p.sendMessage(ChatColor.YELLOW + "/iv help: " + helpUtils.getHelp_page());
 		p.sendMessage(ChatColor.YELLOW + "/invsee <player> : " + helpUtils.getHelp_invsee());
 		p.sendMessage(ChatColor.YELLOW + "/invechest <player> : " + helpUtils.getHelp_invechest());
-		p.sendMessage(ChatColor.YELLOW + "/inventoryview reload : " + helpUtils.getHelp_reload());
+		p.sendMessage(ChatColor.YELLOW + "/iv reload : " + helpUtils.getHelp_reload());
 		p.sendMessage(ChatColor.WHITE + "-----------------------------------------");
-	}
-
-	public void openPlayerInventory(Player p, Player selected) {
-
-		if (selected == null) {
-			p.sendMessage(playernotfound);
-		} else {
-			p.openInventory(selected.getInventory());
-			p.sendMessage(invsee);
-		}
-	}
-
-	public void openPlayerEnderchest(Player p, Player selected) {
-
-		if (selected == null) {
-			p.sendMessage(playernotfound);
-		} else {
-			p.openInventory(selected.getEnderChest());
-			p.sendMessage(invechest);
-		}
 	}
 }
