@@ -20,6 +20,10 @@
 # %player_inv% : Gets the specified player chosen to open the inventory
 # %player_echest% : Gets the specified player chosen to open the enderchest
 
+# Update-Check Option - https://www.spigotmc.org/resources/inventoryview.75100/
+# If true, a permission will be required to recieve the notifications if the player doesnt have the OP enabled
+update-check: true
+
 # Configuration 1.0
 # This configuration will display the InventoryView Messages 
   
@@ -49,8 +53,11 @@ PlayerInventory:
 PlayerEnderchest:
   Message: '&b%player_echest% &eEnderchest Opened'
   Yourself: '&cYou cant open your own enderchest!'
-  
+
 # Configuration 1.4
+# This configuration will display the   
+  
+# Configuration 1.5
 # This configuration will disply the Inventory Protection Events
 
 # Interact : If true, the player will not be able to interact with the players inventories, as yours. If the player has permission "inventoryview.bypass",
