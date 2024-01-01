@@ -34,7 +34,7 @@ InventoryView is a plugin made for Minecraft which provides to you an access to 
 ## Portuguese: <img src="https://github.com/GFelberg/InventoryView/assets/41524430/8c1b1720-0f07-4e1e-be6b-5e205f75b7df" width="30" height="30">
 InventoryView é plugin desenvolvido para Minecraft que fornece o acesso ao inventário dos jogadores, assim como de seus enderchests
 
-## Comandos:
+### Comandos:
     /inventoryview help - Mostrar a Página de Ajuda
     /invsee <target> - Abre o Inventário do Jogador
     /invechest <target> - Abre o Enderchest do Jogador
